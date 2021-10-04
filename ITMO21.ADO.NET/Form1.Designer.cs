@@ -33,6 +33,7 @@ namespace ITMO21.ADO.NET
             this.connectToDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectionListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@ namespace ITMO21.ADO.NET
             // 
             this.connectToDBToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openConnectionToolStripMenuItem,
-            this.closeConnectionToolStripMenuItem});
+            this.closeConnectionToolStripMenuItem,
+            this.connectionListToolStripMenuItem});
             this.connectToDBToolStripMenuItem.Name = "connectToDBToolStripMenuItem";
             this.connectToDBToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.connectToDBToolStripMenuItem.Text = "Connect to DB";
@@ -68,6 +70,13 @@ namespace ITMO21.ADO.NET
             this.closeConnectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeConnectionToolStripMenuItem.Text = "Close connection";
             this.closeConnectionToolStripMenuItem.Click += new System.EventHandler(this.closeConnectionToolStripMenuItem_Click);
+            // 
+            // connectionListToolStripMenuItem
+            // 
+            this.connectionListToolStripMenuItem.Name = "connectionListToolStripMenuItem";
+            this.connectionListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.connectionListToolStripMenuItem.Text = "Connection List";
+            this.connectionListToolStripMenuItem.Click += new System.EventHandler(this.connectionListToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -91,6 +100,7 @@ namespace ITMO21.ADO.NET
         private System.Windows.Forms.ToolStripMenuItem connectToDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openConnectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeConnectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectionListToolStripMenuItem;
     }
 }
 

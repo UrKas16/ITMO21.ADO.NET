@@ -64,9 +64,9 @@ namespace ITMO21.ADO.NET
             // 
             // closreConnectionToolStripMenuItem
             // 
-            this.closreConnectionToolStripMenuItem.Name = "closreConnectionToolStripMenuItem";
+            this.closreConnectionToolStripMenuItem.Name = "closeConnectionToolStripMenuItem";
             this.closreConnectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.closreConnectionToolStripMenuItem.Text = "Closre connection";
+            this.closreConnectionToolStripMenuItem.Text = "Close connection";
             this.closreConnectionToolStripMenuItem.Click += new System.EventHandler(this.closreConnectionToolStripMenuItem_Click);
             // 
             // Form1

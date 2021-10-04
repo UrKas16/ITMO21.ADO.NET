@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace ITMO21.ADO.NET
 {
@@ -36,14 +37,22 @@ namespace ITMO21.ADO.NET
                     MessageBox.Show("Соединение с базой уже установлено");
                 }
             }
-            catch
+            catch (OleDbException sql)
             {
-                MessageBox.Show("Ошибка соединения с базой");
-                throw;
+                foreach (OleDbError se in sql.Errors)
+                {
+                    MessageBox.Show(se.Message, "SQL error code " + se.NativeError, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                //MessageBox.Show("Ошибка соединения с базой");
+                //throw;
+            }
+            catch (Exception Xcp)
+            {
+                MessageBox.Show(Xcp.Message, "Unexpected Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void closreConnectionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void closeConnectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (connection.State == ConnectionState.Open)
             {

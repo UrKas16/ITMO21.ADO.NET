@@ -20,6 +20,13 @@ namespace ITMO21.ADO.NET
         public Form1()
         {
             InitializeComponent();
+            this.connection.StateChange += new StateChangeEventHandler(this.connection_StateChange);
+        }
+
+        private void connection_StateChange(object sender, StateChangeEventArgs e)
+        {
+            openConnectionToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
+            closeConnectionToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Open);
         }
 
         private void openConnectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,7 +37,7 @@ namespace ITMO21.ADO.NET
                 {
                     connection.ConnectionString = testConnect;
                     connection.Open();
-                    MessageBox.Show("Соеждинение с базой установлено");
+                    MessageBox.Show("Соединение с базой установлено");
                 }
                 else
                 {

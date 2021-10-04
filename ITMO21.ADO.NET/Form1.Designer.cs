@@ -32,7 +32,7 @@ namespace ITMO21.ADO.NET
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connectToDBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closreConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@ namespace ITMO21.ADO.NET
             // 
             this.connectToDBToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openConnectionToolStripMenuItem,
-            this.closreConnectionToolStripMenuItem});
+            this.closeConnectionToolStripMenuItem});
             this.connectToDBToolStripMenuItem.Name = "connectToDBToolStripMenuItem";
             this.connectToDBToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.connectToDBToolStripMenuItem.Text = "Connect to DB";
@@ -62,12 +62,12 @@ namespace ITMO21.ADO.NET
             this.openConnectionToolStripMenuItem.Text = "Open connection";
             this.openConnectionToolStripMenuItem.Click += new System.EventHandler(this.openConnectionToolStripMenuItem_Click);
             // 
-            // closreConnectionToolStripMenuItem
+            // closeConnectionToolStripMenuItem
             // 
-            this.closreConnectionToolStripMenuItem.Name = "closeConnectionToolStripMenuItem";
-            this.closreConnectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.closreConnectionToolStripMenuItem.Text = "Close connection";
-            this.closreConnectionToolStripMenuItem.Click += new System.EventHandler(this.closreConnectionToolStripMenuItem_Click);
+            this.closeConnectionToolStripMenuItem.Name = "closeConnectionToolStripMenuItem";
+            this.closeConnectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeConnectionToolStripMenuItem.Text = "Close connection";
+            this.closeConnectionToolStripMenuItem.Click += new System.EventHandler(this.closeConnectionToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -90,7 +90,7 @@ namespace ITMO21.ADO.NET
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem connectToDBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openConnectionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closreConnectionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeConnectionToolStripMenuItem;
     }
 }
 

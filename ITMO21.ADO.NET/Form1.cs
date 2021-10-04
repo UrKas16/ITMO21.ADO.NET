@@ -101,5 +101,20 @@ namespace ITMO21.ADO.NET
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "SELECT COUNT(*) FROM Production.Product";
+            int num = (int)command.ExecuteScalar();
+            label1.Text = num.ToString();
+        }
     }
 }

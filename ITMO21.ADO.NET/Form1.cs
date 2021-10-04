@@ -112,7 +112,7 @@ namespace ITMO21.ADO.NET
 
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "SELECT COUNT(*) FROM Production.Product";
+            command.CommandText = "SELECT COUNT(*) FROM Production.ProductCategory";
             int num = (int)command.ExecuteScalar();
             label1.Text = num.ToString();
         }
@@ -126,7 +126,7 @@ namespace ITMO21.ADO.NET
             }
 
             OleDbCommand command = connection.CreateCommand();
-            command.CommandText = "SELECT Name From Production.Product";
+            command.CommandText = "SELECT Name From Production.ProductCategory";
             OleDbDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
@@ -135,6 +135,40 @@ namespace ITMO21.ADO.NET
             }
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OleDbConnection connection = new OleDbConnection(testConnect);
+            connection.Open();
+            OleDbTransaction OleTran = connection.BeginTransaction();
+            OleDbCommand command = connection.CreateCommand();
+            command.Transaction = OleTran;
+
+            try
+            {
+                command.CommandText = "INSERT INTO Production.ProductCategory (Name) VALUES ('Byke')";
+                command.ExecuteNonQuery();
+                command.CommandText = "INSERT INTO Production.ProductCategory (Name) VALUES ('MotoByke')";
+                command.ExecuteNonQuery();
+
+                OleTran.Commit();
+                MessageBox.Show("Данные добавлены в БД");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                try
+                {
+                    OleTran.Rollback();
+                }
+                catch (Exception exRollBack)
+                {
+                    MessageBox.Show(exRollBack.Message);
+                }
+            }
+            connection.Close();
         }
     }
 }

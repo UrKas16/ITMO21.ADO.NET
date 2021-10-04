@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO21.ADO.NET.DBConnection", "ITMO21.ADO.NET\ITMO21.ADO.NET.DBConnection.csproj", "{357F7592-F10A-486A-BF53-53EC7EBF22DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO21.ADO.NET.DSConnect", "ITMO21.ADO.NET.DSConnect\ITMO21.ADO.NET.DSConnect.csproj", "{3F90DA80-8044-415A-8782-3EFD2A524224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{357F7592-F10A-486A-BF53-53EC7EBF22DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{357F7592-F10A-486A-BF53-53EC7EBF22DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{357F7592-F10A-486A-BF53-53EC7EBF22DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F90DA80-8044-415A-8782-3EFD2A524224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F90DA80-8044-415A-8782-3EFD2A524224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F90DA80-8044-415A-8782-3EFD2A524224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F90DA80-8044-415A-8782-3EFD2A524224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

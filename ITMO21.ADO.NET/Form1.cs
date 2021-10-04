@@ -116,5 +116,25 @@ namespace ITMO21.ADO.NET
             int num = (int)command.ExecuteScalar();
             label1.Text = num.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+
+            OleDbCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT Name From Production.Product";
+            OleDbDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                listView1.Items.Add(reader["Name"].ToString());
+            }
+
+
+        }
     }
 }
